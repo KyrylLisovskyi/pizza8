@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Polls</title>
+</head>
+<body>
+<label>What is your favourite pizza?</label><br/>
+<select class="form-select form-select-lg mb-3" aria-label="Large select example">
+  <option selected>all pizzas</option>
+  <option value="1">Mantis lunch</option>
+  <option value="2">pepperoni</option>
+  <option value="3">hawaii</option>
+  <option value="4">Crab678</option>
+</select><br/>
+<input type="submit" value="submit"><br/>
+    <button class="btn" type="button" onclick="window.location.href='{{url_for('poll_results')}}';">
+    results for this poll</button> <br/>
+    <button class="btn" type="button" onclick="window.location.href='{{url_for('main_page')}}';">
+    Main page</button> <br/>
+</body>
+</html>

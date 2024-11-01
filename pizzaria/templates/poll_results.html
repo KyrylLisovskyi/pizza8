@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>poll results</title>
+    <style>
+  table, th, td {
+  border:1px solid black;
+  }
+  </style>
+</head>
+<body>
+<table style="width:100%">
+<tr>
+<th>name</th>
+</tr>
+{%for pizza in data%}
+<tr>
+<td>{{pizza[1]}}</td>
+</tr>
+{%endfor%}
+</table>
+<button class="btn" type="button" onclick="window.location.href='{{url_for('Polls')}}';">
+    poll</button> <br/>
+    <button class="btn" type="button" onclick="window.location.href='{{url_for('main_page')}}';">
+    Main page</button> <br/>
+</body>
+</html>

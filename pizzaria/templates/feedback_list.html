@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>feedback list</title>
+</head>
+<body>
+    <h1>feedback list</h1>
+    <ul>
+        {%for feedback in feedbacks%}
+            <li><strong>{{feedback.username}}:</strong> {{feedback.feedback}}</li>
+        {%endfor%}
+    </ul>
+    <button class="btn" type="button" onclick="window.location.href='{{url_for('feedback')}}';">
+        Add your feedback!</button> <br/>
+    <button class="btn" type="button" onclick="window.location.href='{{url_for('main_page')}}';">
+        Main page</button> <br/>
+</body>
+</html>

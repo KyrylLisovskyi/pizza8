@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <div>
+      <style>
+        #weather {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            border: 1px solid #ddd;
+            margin-top: 20px;
+        }
+    </style>
+    <h1>weather</h1>
+    <form method="get" action="/main_page/">
+        <label for="date">import date ("{{date}}"):</label>
+        <input type="text" id="date" name="date" value="{{date}}">
+        <button type="submit">show weather</button>
+    </form>
+    <div id="main_page">{{weather}}</div>
+    </div>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>pizzaria</title>
+    <h1>welcome to pizzaria!</h1><br/>
+    <button class="btn" type="button" onclick="window.location.href='{{url_for('add_pizza')}}';">
+    Add pizza</button> <br/>
+    <button class="btn" type="button" onclick="window.location.href='{{url_for('menu')}}';">
+    Menu</button> <br/>
+    <button class="btn" type="button" onclick="window.location.href='{{url_for('Polls')}}';">
+    What is your favourite pizza?</button> <br/>
+    <button class="btn" type="button" onclick="window.location.href='{{url_for('feedback')}}';">
+    Feedback</button> <br/>
+    <button class="btn" type="button" onclick="window.location.href='{{url_for('feedback_list')}}';">
+    List of feedbacks</button> <br/>
+  </head>
+  <body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQb1lpruKcy8C9rhAWKCcPOFuvToDRembz-oA&s" class="img-fluid" alt="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQb1lpruKcy8C9rhAWKCcPOFuvToDRembz-oA&s"><br/>
+  <button class="btn" type="button" onclick="window.location.href='https://www.youtube.com/watch?v=dQw4w9WgXcQ'">
+    VERY IMPORTANT INFORMATION!!!</button> <br/>
+  </body>
+</html>

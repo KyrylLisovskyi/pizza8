@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>feedback</title>
+</head>
+<body>
+    <h1>left your feedback</h1>
+    <form method="POST">
+        {{form.hidden_tag()}}
+        <p>
+            {{form.username.label}}<br>
+            {{form.username(size=32)}}<br>
+            {%for error in form.username.errors%}
+                <span style="color: red;">[{{error}}]</span>
+            {%endfor%}
+        </p>
+        <p>
+            {{form.feedback.label}}<br>
+            {{form.feedback(rows=5, cols=40)}}<br>
+            {%for error in form.feedback.errors%}
+                <span style="color: red;">[{{error}}]</span>
+            {%endfor%}
+        </p>
+        <p>{{form.submit()}}</p>
+    </form>
+    <button class="btn" type="button" onclick="window.location.href='{{url_for('feedback_list')}}';">
+        View all feedbacks</button> <br/>
+    <button class="btn" type="button" onclick="window.location.href='{{url_for('main_page')}}';">
+        Main page</button> <br/>
+</body>
+</html>
